@@ -10,7 +10,12 @@ let package = Package(
         .library(name: "ZipArchive", targets: ["ZipArchive"])
     ],
     targets: [
-        .target(name: "ZipArchive", path: "SSZipArchive", publicHeadersPath: ".")
+        .target(name: "ZipArchive",
+                path: "SSZipArchive",
+                publicHeadersPath: ".",
+                linkerSettings: [
+                    .linkedLibrary("z")
+                ])
     ]
     
 )
