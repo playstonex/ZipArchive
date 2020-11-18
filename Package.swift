@@ -14,7 +14,9 @@ let package = Package(
                 path: "SSZipArchive",
                 publicHeadersPath: ".",
                 linkerSettings: [
-                    .linkedLibrary("z")
+                    .linkedLibrary("z"),
+                    .linkedLibrary("iconv"),
+                    .linkedFramework("Security")
                 ])
     ]
     
